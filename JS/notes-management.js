@@ -121,7 +121,7 @@ function createNote() {
     removeNodeButtonLoopVerify();
     editNoteGetOldValues();
 
-    setTimeout(()=>{taskAlertModal('Node criado com sucesso.')}, 500);
+    setTimeout(()=>{taskAlertModal('Note criado com sucesso.')}, 500);
     
 
 }
