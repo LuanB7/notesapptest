@@ -10,6 +10,8 @@
 body {
     box-sizing: border-box;
     font-family: 'Roboto', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    line-height: 1.5em;
 }
 
 
