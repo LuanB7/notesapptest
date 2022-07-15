@@ -40,6 +40,8 @@ header nav ul {
 
 header nav ul li {
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 header nav ul li a {
@@ -50,8 +52,48 @@ header nav ul li a {
     display: flex;
 }
 
+.header-settings-button {
+    font-size: 22px;
+
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(0, 132, 255, 0.1);
+    color: rgb(0, 132, 255);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+    .header-settings-button i {
+        cursor: pointer;
+    }
+
+    .header-settings-button:hover {
+        background-color: rgba(0, 132, 255, 0.17);
+    } 
+
 .header-space {
     height: 70px;
+}
+
+.header-logo-box {
+    color: rgb(49, 59, 70);
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.header-logo-primary-color {
+    color: rgb(0, 132, 255);
+}
+
+.header-logo-box i {
+    margin-right: 5px;
 }
 
 

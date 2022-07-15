@@ -108,7 +108,7 @@ function createNote() {
         <h2>${cnTitle}</h2>
         <p>${cnTextLB.slice(0, 200) + tresPontos}</p>
         <div class="note-buttons-box">
-            <button class="note-view-more-button" onclick="viewMore('${cnTitle}', '${cnTextLB}')">Ver mais</button>
+            <button class="note-view-more-button" onclick="viewMore('${cnTitle}', '${cnTextLB}', '${cnColor}')">Ver mais</button>
             <button class="note-edit-button"><i class="fas fa-pen"></i></button>
             <button class="note-trash-button"><i class="fas fa-trash-alt"></i></button>
         </div>
