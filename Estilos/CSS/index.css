@@ -1,0 +1,103 @@
+.note-box {
+    width: calc(33.33% - 60px - 30px);
+    margin-left: 30px;
+    background-color: white;
+    border-radius: 7px;
+
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.note-line-color {
+    width: 100%;
+    height: 10px;
+    background-color: rgb(0, 132, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.note-box h2 {
+    font-size: 19px;
+    margin-bottom: 13px;
+    margin-top: 10px;
+    color: rgb(49, 59, 70);
+}
+
+.note-box p {
+    font-size: 16px;
+    color: rgba(49, 59, 70, 0.8);
+}
+
+.note-buttons-box{
+    width: 100%;
+    display: flex;
+    margin-top: 19px;
+    justify-content: space-between;
+}
+
+.note-trash-button {
+    border: 0;
+    outline: 0;
+
+    font-size: 19px;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(226, 3, 3);
+    background-color: rgba(221, 0, 0, 0.1);
+    transition: 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+    .note-trash-button:hover {
+        background-color: rgba(221, 0, 0, 0.17);
+    }
+
+.note-edit-button {
+    border: 0;
+    outline: 0;
+
+    font-size: 19px;
+    width: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgba(0, 132, 255, 0.1);
+    color: rgb(0, 132, 255);
+    transition: 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+    .note-edit-button:hover {
+        background-color: rgba(0, 132, 255, 0.17);
+    }
+
+.note-view-more-button {
+    border: 0;
+    outline: 0;
+
+    font-size: 19px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    width: calc(100% - 80px - 25px);
+    font-size: 16px;
+
+    background-color: rgba(0, 132, 255, 0.1);
+    color: rgb(0, 132, 255);
+
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+    .note-view-more-button:hover {
+        background-color: rgba(0, 132, 255, 0.17);
+    }

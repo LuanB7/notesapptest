@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="Estilos/CSS/index.css">
+    <link rel="stylesheet" href="Estilos/CSS/mobile.css">
+
+    <script src="https://kit.fontawesome.com/16f8273a49.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https: //fonts.googleapis.com/css2? family= Roboto & display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><div class="hader-logo-box">Logo</div></li>
+                <div class="header-options-box">
+                    <li><a href="">Option</a></li>
+                    <li><a href="">Option</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="header-space"></div>
+
+    <main>
+        <div class="index-box">
+            <div class="index-box-menu">
+                <nav>
+                    <ul>
+                        <li><a href="" class="index-box-menu-selected-option"><i class="fas fa-folder"></i><span>Meus notes</span></a></li>
+                        <li><a href=""><i class="fas fa-bell"></i><span>Notificações</span></a></li>
+                        <li><a href=""><i class="fas fa-trash-alt"></i><span>Lixeira</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="index-box-content" id="index-box-content">
+                <div class="dentro-index-box-content" id="dentro-index-box-content">
+
+                    <div class="note-box" id="note-box">
+                        <div class="note-line-color"></div>
+                        <h2>Exemplo de Nota</h2>
+                        <p id="note-box-p">Este é um exemplo de nota. Você pode criar as suas próprias notas clicando no botão (+) no canto inferior direito.<br>Você pode definir cores para organizar melhor suas notas.</p>
+                        <div class="note-buttons-box">
+                            <button class="note-view-more-button" onclick="viewMore('Exemplo de Nota', 'Este é um exemplo de nota. Você pode criar as suas próprias notas clicando no botão (+) no canto inferior direito.<br>Você pode definir cores para organizar melhor suas notas.', '#0084ff')">Ver mais</button>
+                            <button class="note-edit-button"><i class="fas fa-pen"></i></button>
+                            <button class="note-trash-button"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <button class="create-note-button" onclick="openCreateNoteModal()"><i class="fas fa-plus"></i></button>
+        </div>
+    </main>
+
+
+    <div class="fundo-escuro"></div>
+    <div class="view-more-modal">
+        <div class="note-line-color note-line-color-view-more"></div>
+        <div class="view-more-modal-content">
+            <h2 class="view-more-modal-title">Exemplo de Nota</h2>
+            <p class="view-more-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolores, porro id voluptates incidunt facilis eaque totam. Dolore aliquid est maxime incidunt natus architecto. Voluptatibus iure molestiae dolorem saepe tenetur?</p>
+        </div>
+
+        <div class="view-more-modal-buttons">
+            <!--<button class="view-more-modal-editar-button" onclick="closeViewMore()"><i class="fas fa-pen"></i>Editar</button> -->
+            <button class="view-more-modal-fechar-button" onclick="closeViewMore()">Fechar</button>
+        </div>
+    </div>
+
+
+    <div class="create-note-modal">
+        <h1>Criar nova nota</h1>
+        <div class="create-note-modal-form">
+            <input type="text" id="cnmf-title" placeholder="Título">
+            <textarea name="" id="cnmf-text" cols="30" rows="10" placeholder="Escreva sua nota..."></textarea>
+            <input type="color" name="" id="cnmf-color-input" value="#0084ff">
+            <div class="create-note-modal-form-color-select-box">
+
+                <div class="cnmf-color-label-box">
+                    <input type="radio" name="cnmf-color-radio" id="cnmf-color-radio-1" class="cnmf-color-radio" colorhex="#0084ff" checked>
+                    <label for="cnmf-color-radio-1" class="cnmf-color-label" id="" onclick="cnmfColorSelect()"></label>
+                </div>
+
+                <div class="cnmf-color-label-box">
+                    <input type="radio" name="cnmf-color-radio" id="cnmf-color-radio-2" class="cnmf-color-radio" colorhex="#0dd370">
+                    <label for="cnmf-color-radio-2" class="cnmf-color-label" id="" onclick="cnmfColorSelect()"></label>
+                </div>
+
+                <div class="cnmf-color-label-box">
+                    <input type="radio" name="cnmf-color-radio" id="cnmf-color-radio-3" class="cnmf-color-radio" colorhex="#ffd900">
+                    <label for="cnmf-color-radio-3" class="cnmf-color-label" id="" onclick="cnmfColorSelect()"></label>
+                </div>
+
+                <div class="cnmf-color-label-box">
+                    <input type="radio" name="cnmf-color-radio" id="cnmf-color-radio-4" class="cnmf-color-radio" colorhex="#df011f">
+                    <label for="cnmf-color-radio-4" class="cnmf-color-label" id="" onclick="cnmfColorSelect()"></label>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="create-note-modal-form-buttons-box">
+            <button class="cnmf-buttton-cancel" onclick="closeCreateNoteModal()">Cancelar</button>
+            <button class="cnmf-buttton-confirm" onclick="createNote(), closeCreateNoteModal()">Criar Nota</button>
+        </div>
+    </div>
+
+
+    <div class="edit-note-modal">
+        <h1><i class="fas fa-pen"></i>Editar nota</h1>
+        <div class="edit-note-modal-form">
+            <input type="text" id="enmf-title" placeholder="Título">
+            <textarea name="" id="enmf-text" cols="30" rows="10" placeholder="Escreva sua nota..."></textarea>
+            <input type="color" name="" id="enmf-color-input">
+            <p>Por favor, indique a cor novamente.</p>
+            <div class="edit-note-modal-form-color-select-box">
+
+                <div class="enmf-color-label-box">
+                    <input type="radio" name="enmf-color-radio" id="enmf-color-radio-1" class="enmf-color-radio" colorhex="#0084ff" checked>
+                    <label for="enmf-color-radio-1" class="enmf-color-label" id="" onclick="enmfColorSelect()"></label>
+                </div>
+
+                <div class="enmf-color-label-box">
+                    <input type="radio" name="enmf-color-radio" id="enmf-color-radio-2" class="enmf-color-radio" colorhex="#0dd370">
+                    <label for="enmf-color-radio-2" class="enmf-color-label" id="" onclick="enmfColorSelect()"></label>
+                </div>
+
+                <div class="enmf-color-label-box">
+                    <input type="radio" name="enmf-color-radio" id="enmf-color-radio-3" class="enmf-color-radio" colorhex="#ffd900">
+                    <label for="enmf-color-radio-3" class="enmf-color-label" id="" onclick="enmfColorSelect()"></label>
+                </div>
+
+                <div class="enmf-color-label-box">
+                    <input type="radio" name="enmf-color-radio" id="enmf-color-radio-4" class="enmf-color-radio" colorhex="#df011f">
+                    <label for="enmf-color-radio-4" class="enmf-color-label" id="" onclick="enmfColorSelect()"></label>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="edit-note-modal-form-buttons-box">
+            <button class="enmf-buttton-cancel" onclick="closeEditNoteModal()">Cancelar</button>
+            <button class="enmf-buttton-confirm" id="enmf-buttton-confirm" onclick="closeEditNoteModal()">Atualizar Nota</button>
+        </div>
+    </div>
+
+
+    <script src="JS/notes-management.js"></script>
+    
+</body>
+</html>
