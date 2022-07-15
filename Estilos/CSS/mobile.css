@@ -11,37 +11,57 @@
 
     .index-box-menu {
         width: 20%;
-        height: calc(100% - 30px);
+        height: calc(100% - 20px);
 
         border-radius: 0px 15px 0px 0px;
+        margin-top: 20px;
     }
 
     .index-box-menu nav ul li a {
-        width: calc(100% - 30px);
+        width: calc(100% - 40px);
         border-radius: 10px;
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
 
         text-align: center;
-    }
-
-    .index-box-menu nav ul li a:hover {
-        width: calc(100% - 30px);
+        background-color: transparent;
     }
 
     .index-box-menu nav ul li a i {
         margin-left: 0;
         margin-right: 0;
         font-size: 25px;
+        color: rgba(0, 132, 255, 0.4);
     }
 
+        .index-box-menu nav ul li a:hover {
+            width: calc(100% - 40px);
+            background-color: transparent;
+        }
+
+        .index-box-menu nav ul li .index-box-menu-selected-option i {
+            color: rgb(0, 132, 255);
+        }
+
+   
     .index-box-menu nav ul li a i + span {
         display: none;
     }
 
     .index-box-content {
-        width: calc(80% - 30px);
-        border-radius: 15px 0px 0px 0px;
+        width: calc(80% - 10px);
+        border-radius: 20px 0px 0px 0px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .dentro-index-box-content {
+        margin: 20px;
+        margin-left: 0px;
+    }
+
+    .note-box {
+        margin: 0px 0px 20px 20px;
     }
 
     .create-note-button {

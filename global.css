@@ -109,7 +109,7 @@ main {
 
     .index-box-menu-selected-option {
         background-color: rgba(0, 132, 255, 0.15);
-        min-width: calc(100% - 30px);
+        min-width: calc(100% - 40px);
     }
 
 .index-box-menu nav ul li a i {
@@ -129,12 +129,16 @@ main {
     overflow-y: scroll;
 }
 
+
+
 .dentro-index-box-content {
     margin: 30px;
     margin-left: 0;
     display: flex;
     flex-wrap: wrap;
 }
+
+
 
 .create-note-button {
     border: 0;
@@ -162,10 +166,6 @@ main {
     .create-note-button:hover {
         transform: scale(1.1);
     }
-
-
-
-
 
 
 
