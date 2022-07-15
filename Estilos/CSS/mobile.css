@@ -112,4 +112,18 @@
     
         transition: 0.2s;
     }
+
+    /* Task Alert Modal */
+
+    .task-alert-modal {
+        position: fixed;
+        width: calc(100% - 60px - 40px);
+        bottom: 20px;
+        left: 20px;
+        padding: 30px;
+        margin-bottom: -5%;
+
+    }
+
+
 }
