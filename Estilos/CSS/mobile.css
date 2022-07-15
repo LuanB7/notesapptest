@@ -64,8 +64,50 @@
         margin: 0px 0px 20px 20px;
     }
 
+    .note-view-more-button {
+        font-size: 14px;
+    }
+
     .create-note-button {
         width: 80px;
         height: 80px;
+    }
+
+    /* View ore modal */
+
+    .view-more-modal {
+        width: calc(100% - 40px - 60px);
+        padding: 30px;
+    }
+
+
+    /* Create/edit note modal */
+
+    .create-note-modal, .edit-note-modal {
+        width: calc(100% - 40px - 60px);
+        padding: 30px;
+    }
+
+    .create-note-modal-form textarea, .edit-note-modal-form textarea {
+        height: 200px;
+    }
+
+    .create-note-modal-form-color-select-box, .edit-note-modal-form-color-select-box {
+        justify-content: space-between;
+    }
+
+
+    .cnmf-color-label-box, .enmf-color-label-box {
+        margin-right: 0;
+        width: calc(25% - 8px);
+        position: relative;
+    }
+    
+    .cnmf-color-label, .enmf-color-label {
+        width: 100%;
+       
+        margin-right: 0;
+    
+        transition: 0.2s;
     }
 }
