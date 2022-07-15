@@ -500,4 +500,31 @@ main {
 }
 
 
+/* Task Alert Modal */
+
+.task-alert-modal {
+    position: fixed;
+    width: 40%;
+    bottom: 30px;
+    left: 30px;
+
+    background-color: white;
+
+    padding: 30px;
+    border-radius: 12px;
+
+    transition: 0.4s;
+    box-shadow: 0px 0px 30px rgba(1, 68, 131, 0.1);
+
+    visibility: hidden;
+    opacity: 0;
+    margin-bottom: -5%;
+
+}
+
+    .task-alert-modal p {
+        font-size: 16px;
+        color: rgb(49, 59, 70);
+    }
+
 

@@ -121,6 +121,9 @@ function createNote() {
     removeNodeButtonLoopVerify();
     editNoteGetOldValues();
 
+    setTimeout(()=>{taskAlertModal('Node criado com sucesso.')}, 500);
+    
+
 }
 
 function removeNodeButtonLoopVerify() {
@@ -131,8 +134,9 @@ function removeNodeButtonLoopVerify() {
             e.preventDefault();
             var li = this.parentNode.parentNode;
             li.parentNode.removeChild(li);
-            
             saveNotes();
+
+            setTimeout(()=>{taskAlertModal('Removido com sucesso.')}, 300);
 
         }
 
@@ -254,6 +258,8 @@ function editNoteGetOldValues() {
                 closeEditNoteModal();
                 //console.log('atualizado');
                 saveNotes();
+
+                setTimeout(()=>{taskAlertModal('Atualizado com sucesso.')}, 500);
 
             }
 
